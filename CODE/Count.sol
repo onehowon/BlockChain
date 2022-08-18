@@ -48,3 +48,22 @@ BallotContract.events.Voted(
         console.log(event);
     }
 ).on('error', console.error);
+
+// Structure Types
+// Solidity에서 제공하지 않는 새로운 형식의 자료를 만들 때 사용
+// 여러 자료를 묶어 복잡한 자료형(complex type)을 만들 때 유용
+contract Ballot{
+    struct Voter{
+        uint weight;
+        bool voted;
+        address delegate;
+        uint vote;
+    }
+}
+
+contract SocialMedia{
+    struct Friend{
+        uint id;
+        mapping(uint => address) friends;
+    }
+}
