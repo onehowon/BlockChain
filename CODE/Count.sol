@@ -67,3 +67,15 @@ contract SocialMedia{
         mapping(uint => address) friends;
     }
 }
+
+// Enum Types
+// Enum은 임의의 상수를 정의하기에 적합
+// e.g 상태 -> Active, Inactive
+// e.g 요일 -> Mon~Sun
+
+contract Ballot{
+    enum Status{
+        Open,
+        Closed
+    }
+}
