@@ -30,3 +30,21 @@ contract Ballot{
         // 'onlyChair' modifier ensures that this function is called by the chairperson
     }
 }
+
+// Events
+// 이벤트는 EVM 로깅을 활용한 시스템
+// 이벤트가 실행시마다 트랜잭션 로그에 저장
+// 저장된 로그는 컨트랙트 주소와 연동돼 클라이언트가 RPC로 조회 가능
+
+contract Ballot{
+    event Voted(address voter, uint proposal) public{
+        emit Voted(msg.sender, proposal);
+    }
+}
+const BallotContract = new caver.klay.Contract(abi, address);
+BallotContract.events.Voted(
+    {fromBlock : 0},
+    function(error, event){
+        console.log(event);
+    }
+).on('error', console.error);
