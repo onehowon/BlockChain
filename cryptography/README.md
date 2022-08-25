@@ -12,3 +12,10 @@
 ![image](https://user-images.githubusercontent.com/81984723/186636263-bcc340b4-84da-48c1-b359-0c2dd92147ef.png)
 ### 확산 : 평문의 작은 변화가 암호문의 큰 변화로 이어지는 성질
 ![image](https://user-images.githubusercontent.com/81984723/186636328-225f574c-f95b-4bba-9476-0c310ef468e2.png)
+# 대칭키 암호 시스템
+### 블록 암호 : 평문을 정해진 크기의 블록 단위로 암호화하는 암호
+![image](https://user-images.githubusercontent.com/81984723/186636811-8babf789-38e5-4fda-97cc-ce61d2ae8fce.png)
+#### 평문의 크기가 블록 크기의 배수가 아니어서 블록으로 균등하게 쪼갤 수 없다면, 평문뒤에 데이터를 추가하는 패딩(평문이 블록 크기의 배수가 될 때까지 데이터를 추가하는 것)을 수행한다.
+
+### 스트림 암호 : 송신자와 수신자가 공유하는 데이터 스트림을 생성하고 이를 평문에 XOR하는 암호입니다. 평문을 P, 암호문을 C, 스트림을 X라고 할 때, 암호문 C는 C = P + X로 생성됩니다.
+![image](https://user-images.githubusercontent.com/81984723/186636861-22347aaa-7429-4077-865d-689efb4d64f8.png)
