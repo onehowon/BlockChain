@@ -48,3 +48,10 @@
 ![image](https://user-images.githubusercontent.com/81984723/187123676-d40246fe-af77-4bea-9028-67c283cea65d.png)
 #### 이후 재구성된 입력에 대해 AddRoundKey 함수를 적용하고, 마지막 라운드 전까지 매 라운드마다 SubBytes, ShiftRows, MixColums, AddRoundKey 함수를 반복하여 적용
 #### AES 라운드 함수들은 역함수가 존재하므로, 역함수를 이용해 AES 복호화가 이루어짐
+
+## AES 라운드 함수
+### SubBytes
+#### State의 각 바이트를 S-Box를 참조하여 치환하는 함수
+#### 바이트의 상위 4비트가 행, 하위 4비트가 열을 결정한다.
+![image](https://user-images.githubusercontent.com/81984723/187123952-a58bba54-906d-440c-8c9c-2d7f3dbe8c5c.png)
+![image](https://user-images.githubusercontent.com/81984723/187124026-578cf83f-741b-4c0c-892b-9f7a0ffc0088.png)
