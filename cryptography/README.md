@@ -71,3 +71,22 @@
 #### 키 생성 함수(Key Schedule)로 생성된 라운드 키의 state를 각 바이트별로 XOR합니다.
 #### 복호화할 때 XOR의 성질을 이용해 동일한 키를 state에 XOR합니다.
 ![image](https://user-images.githubusercontent.com/81984723/187125305-f810f50a-1231-4fb0-a19d-9bb3963fe73e.png)
+
+### Key Schedule
+#### 키 생성 함수는 입력된 키로부터 각 라운드에 쓰일 라운드 키를 생성한다.
+
+### RotWord
+![image](https://user-images.githubusercontent.com/81984723/187125635-b4eeb7ea-078d-4549-a824-d43f125d99d5.png)
+
+### SubWord
+![image](https://user-images.githubusercontent.com/81984723/187125665-8cb1c0df-645d-48ac-a25a-5107b70f0673.png)
+
+### Rcon
+![image](https://user-images.githubusercontent.com/81984723/187125712-09688ee7-d096-4819-9e39-558c03759946.png)
+
+# DES(Data Encryption Standard)
+#### 56비트
+#### 혼돈 성질을 만족하기 위해 치환, 확산 성질을 만족하기 위해 순열을 사용한다.
+
+### 곱 암호
+#### 각 라운드를 여러 번 반복하여 암호학적 안전성을 확보하는 암호
