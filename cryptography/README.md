@@ -55,3 +55,19 @@
 #### 바이트의 상위 4비트가 행, 하위 4비트가 열을 결정한다.
 ![image](https://user-images.githubusercontent.com/81984723/187123952-a58bba54-906d-440c-8c9c-2d7f3dbe8c5c.png)
 ![image](https://user-images.githubusercontent.com/81984723/187124026-578cf83f-741b-4c0c-892b-9f7a0ffc0088.png)
+
+### ShiftRows
+#### State의 각 행을 구성하는 바이트들을 쉬프트하는 함수이다.
+#### 4가지 함수 중에서 유일하게 순열의 역할을 수행
+#### 암호화 할 때, 2행은 왼쪽으로 1칸 3행은 왼쪽으로 2칸, 4행은 왼쪽으로 3칸을 민다.
+#### 복호화 할 때, 2행,3행,4행을 각각 오른쪽으로 1칸,2칸,3칸씩 밉니다.
+![image](https://user-images.githubusercontent.com/81984723/187124424-3120a241-1818-4f24-bbcb-f24b43f613ea.png)
+
+### MixColumns
+#### 열 단위로 치환을 수행하는 함수입니다. 치환은 갈루아 필드 내에서 행렬 연산으로 구해진다.
+![image](https://user-images.githubusercontent.com/81984723/187125160-00ffdbd1-1e39-4699-9070-d61873c93c96.png)
+
+### AddRoundKey
+#### 키 생성 함수(Key Schedule)로 생성된 라운드 키의 state를 각 바이트별로 XOR합니다.
+#### 복호화할 때 XOR의 성질을 이용해 동일한 키를 state에 XOR합니다.
+![image](https://user-images.githubusercontent.com/81984723/187125305-f810f50a-1231-4fb0-a19d-9bb3963fe73e.png)
