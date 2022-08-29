@@ -42,3 +42,9 @@
 
 ## AES
 #### 라운드마다 128비트 크기의 블록을 암호화는 블록 암호
+#### 키의 길이는 128, 192, 256 비트 중 하나를 선택 가능하고, 라운드 수는 키의 길이에 따라 10,12,14로 결정
+#### 256비트면 AES-256이라고 부름
+#### EX) 입력이 1F3CF203B211C5AA6EB27A45E4D98130라면
+![image](https://user-images.githubusercontent.com/81984723/187123676-d40246fe-af77-4bea-9028-67c283cea65d.png)
+#### 이후 재구성된 입력에 대해 AddRoundKey 함수를 적용하고, 마지막 라운드 전까지 매 라운드마다 SubBytes, ShiftRows, MixColums, AddRoundKey 함수를 반복하여 적용
+#### AES 라운드 함수들은 역함수가 존재하므로, 역함수를 이용해 AES 복호화가 이루어짐
